@@ -1,7 +1,8 @@
 {
-  "name": "my-app",
+  "name": "ims",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://shreyash0102.github.io/ims",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
@@ -10,16 +11,19 @@
     "@types/node": "^16.7.13",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
+    "gh-pages": "^6.3.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-scripts": "5.0.1",
-    "typescript": "^4.4.2",
-    "web-vitals": "^2.1.0",
+    "react-icons": "^4.10.1",
     "react-redux": "^8.1.0",
+    "react-scripts": "5.0.1",
     "redux": "^4.2.0",
-    "react-icons": "^4.10.1"
+    "typescript": "^4.4.2",
+    "web-vitals": "^2.1.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
