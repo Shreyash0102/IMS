@@ -1,0 +1,219 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: black;
+  color: white;
+}
+
+.app {
+  padding: 20px;
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+.stats {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+.toggle-button {
+  padding: 10px 20px;
+  background-color: yellow;
+  color: black;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.toggle-button:hover {
+  background-color: orange;
+}
+
+.card {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  gap: 10px;
+  width: 25%
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 24px; /* Larger font size */
+}
+
+.card p {
+  font-size: 20px; /* Larger font size */
+}
+
+.card .icon {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.inventory {
+  margin-top: 20px;
+}
+
+.empty-message {
+  font-size: 18px;
+  text-align: center;
+  color: gray;
+}
+
+.inventory table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.inventory th {
+  background-color: black;
+  color: yellow;
+  text-align: left;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.inventory td {
+  padding: 10px;
+  border-top: 1px solid white; /* Row dividers */
+  font-size: 14px; /* Smaller font size for table */
+}
+
+.inventory button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+}
+
+.inventory button:hover {
+  color: yellow;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: black;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  max-width: 90%;
+}
+
+.modal h2 {
+  margin-bottom: 10px;
+  color: white;
+}
+
+.modal h3 {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.modal-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+
+.modal label {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.modal label input {
+  padding: 8px;
+  margin-top: 5px;
+  background: #333;
+  color: white;
+  border: 1px solid #555;
+  border-radius: 5px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.modal-actions button {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-actions button:first-child {
+  background-color: grey;
+  color: yellow;
+  border-radius: 10px;
+}
+
+.modal-actions button:last-child {
+  background-color: black;
+  color: yellow;
+}
+
+.toggle-wrapper {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 16px;
+  position: relative;
+}
+
+.toggle-checkbox {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-switch {
+  position: relative;
+  width: 48px;
+  height: 24px;
+  background-color: #ccc;
+  border-radius: 12px;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.toggle-switch::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+.toggle-checkbox:checked + .toggle-switch {
+  background-color: #4caf50;
+}
+
+.toggle-checkbox:checked + .toggle-switch::after {
+  transform: translateX(24px);
+}
